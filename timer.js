@@ -19,7 +19,7 @@ function DisplayingTime(value) {
         seconds = time.getSeconds();
         month = time.getMonth() + 1;
         day = time.getDate();
-        year = time.getFullYear();
+        year = time.getFullYear().toString().substr(2,2);
     }
     
     //this.formFormatTime = function() {
@@ -54,7 +54,7 @@ function DisplayingTime(value) {
 
     function getDateShort() {
         timeline();
-        return month + ":" + day + ":" + year;
+        return month + "/" + day + "/" + year;
     }
 
     function changeTimer() {

@@ -15,14 +15,20 @@ function Statistics(timer) {
 
     this.timer = timer;
 
+    function flDate(variable) {
+        if(!data_flag) {
+            variable++;
+        }
+    }
+
     var clickTimer = {
         doShort: function() {
-            short_form++;
+            short_form++;//flDate(short_form);//short_form++;
             node = "Long";
         },
 
         doLong: function() {
-            long_form++;
+            long_form++;//flDate(long_form);//long_form++;
             node = "Short";
         },
         
@@ -52,8 +58,11 @@ function Statistics(timer) {
             node = "Date";
             data_flag = !data_flag;
         } else {
+            short_form;
+            long_form;
             node = "Short";
             data_flag = !data_flag;
+
         }
         pushNode(node);
     }
@@ -67,10 +76,11 @@ function Statistics(timer) {
         console.log("Date = " + date_form);
         console.log("dblclick = " + db);
     }
-
+    
     timer.addEventListener("click", leftClick ,false);
     timer.addEventListener("contextmenu", rightClick ,false);
     timer.addEventListener("dblclick", handler, false);
+    
 
     return this;
 }

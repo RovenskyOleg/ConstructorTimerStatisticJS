@@ -4,5 +4,5 @@ window.onload = function() {
     var timer2 = new DisplayingTime(document.getElementById("time"));
 
     var statistic = new Statistics(document.getElementById("time"));
-    statistic();
+    statistic;
 }
