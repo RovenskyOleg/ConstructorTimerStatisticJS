@@ -1,0 +1,25 @@
+
+body{
+  background: #FFFFF0;
+  padding: 0px;
+  margin: 0px;
+
+}
+.board{
+    text-align: center;
+    background: red;
+}
+#clock{
+    text-align: center;
+    font-size: 48px;
+}
+.tim{
+    /*margin-top: 100px;*/
+    text-align: center;
+    background: green; 
+}
+#time{
+    font-size: 48px;
+}
+
+
